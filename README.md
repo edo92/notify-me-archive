@@ -1,1 +1,1 @@
-# notify-me
+# NotifyMe
