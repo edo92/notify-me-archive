@@ -5,13 +5,14 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/serverless",
         "main": "packages/serverless/src/index.ts",
         "tsConfig": "packages/serverless/tsconfig.lib.json",
-        "assets": ["packages/serverless/*.md"]
+        "assets": ["packages/serverless/*.md"],
+        "generatePackageJson": true
       }
     },
     "lint": {
